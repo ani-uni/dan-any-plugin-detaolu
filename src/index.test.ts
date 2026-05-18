@@ -37,6 +37,7 @@ beforeAll(async () => {
   chunk = await udb.import(BiliXmlAdapter(xml));
 });
 afterAll(async () => {
+  await udb.shrink();
   await udb.close();
 });
 

@@ -8,7 +8,7 @@ import { getStatsTransformerConfigurator, getStatsUtil4getMost } from "@dan-uni/
 
 export const detaoluPluginConfigurator = (config?: DeTaoLuConfig) =>
   definePlugin(async (uchunk) => {
-    const chunk = await UniChunk.makeChunk(uchunk, {});
+    const chunk = await UniChunk.makeChunk(uchunk, { tmp: true });
     const p = await pakkujs(
       {
         objs: (await uchunk.$danmakus).map((d) => ({
