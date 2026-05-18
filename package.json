@@ -39,6 +39,9 @@
     "prepublishOnly": "vp run build",
     "prepare": "vp config"
   },
+  "dependencies": {
+    "@dan-uni/dan-any": "link:@dan-uni/dan-any"
+  },
   "devDependencies": {
     "@types/node": "^25.8.0",
     "@typescript/native-preview": "^7.0.0-dev.20260517.1",

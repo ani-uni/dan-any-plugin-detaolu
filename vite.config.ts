@@ -11,15 +11,14 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ["@electric-sql/pglite"],
   },
-  worker: {
-    format: "es",
-  },
   pack: {
+    entry: "src/index.ts",
     dts: {
       tsgo: true,
     },
     exports: true,
     plugins: [wasm()],
+    minify: true,
   },
   lint: {
     options: {

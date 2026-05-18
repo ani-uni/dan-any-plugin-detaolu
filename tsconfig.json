@@ -17,6 +17,7 @@
     "verbatimModuleSyntax": true,
     "skipLibCheck": true,
     "allowJs": true,
+    "declarationMap": true,
     "paths": {
       "@/*": ["./src/*"]
     }
