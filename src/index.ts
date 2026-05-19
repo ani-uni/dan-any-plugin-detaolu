@@ -4,9 +4,9 @@ import { UniChunk } from "@dan-uni/dan-any/core";
 
 import pakkujs from "./pakku.js/index.ts";
 import { BiliCommonModeRec, definePlugin, enumPoolCodec } from "@dan-uni/dan-any/adapters";
-import { getStatsTransformerConfigurator, getStatsUtil4getMost } from "@dan-uni/dan-any/plugins";
+import { GetStatsTransformerConfigurator, GetStatsUtil4getMost } from "@dan-uni/dan-any/plugins";
 
-export const detaoluPluginConfigurator = (config?: DeTaoLuConfig) =>
+export const DetaoluPluginConfigurator = (config?: DeTaoLuConfig) =>
   definePlugin(async (uchunk) => {
     const chunk = await UniChunk.makeChunk(uchunk, { tmp: true });
     const p = await pakkujs(
@@ -29,7 +29,7 @@ export const detaoluPluginConfigurator = (config?: DeTaoLuConfig) =>
         return p.danuni_dans[0].danuni_dan;
       } else {
         const dans = p.danuni_dans.map((d) => d.danuni_dan);
-        const stats = await getStatsTransformerConfigurator(["color", "pool", "platform"])(
+        const stats = await GetStatsTransformerConfigurator(["color", "pool", "platform"])(
           Promise.resolve(dans),
         );
         const progress = dans.map((d) => d.progress);
@@ -39,13 +39,13 @@ export const detaoluPluginConfigurator = (config?: DeTaoLuConfig) =>
           progress: dans[0].progress,
           mode: new Set(dans.map((d) => d.mode)).size === 1 ? dans[0].mode : "Top",
           fontsize: dans.length > 10 ? 25 : 36,
-          color: getStatsUtil4getMost(stats.color).val ?? dans[0].color,
+          color: GetStatsUtil4getMost(stats.color).val ?? dans[0].color,
           senderID: "detaolu[bot]@dan-any",
           content: p.chosen_str,
           weight: 10,
-          pool: getStatsUtil4getMost(stats.pool).val ?? dans[0].pool,
+          pool: GetStatsUtil4getMost(stats.pool).val ?? dans[0].pool,
           attr: ["Protect" as const],
-          platform: getStatsUtil4getMost(stats.platform).val ?? dans[0].platform,
+          platform: GetStatsUtil4getMost(stats.platform).val ?? dans[0].platform,
           extra: {
             danuni: {
               merge: {

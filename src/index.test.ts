@@ -1,7 +1,7 @@
 //基于以下注释，根据vitest生成测试用例
 import { afterAll, beforeAll, describe, it } from "vite-plus/test";
 
-import { detaoluPluginConfigurator } from "./index.ts";
+import { DetaoluPluginConfigurator } from "./index.ts";
 import { UniDB, type InitedUniDB, type UniChunk } from "@dan-uni/dan-any/core";
 import { BiliXmlAdapter, DanuniJsonTransformerConfigurator } from "@dan-uni/dan-any/adapters";
 
@@ -43,7 +43,7 @@ afterAll(async () => {
 
 describe("其它", () => {
   it("反套路(基于pakku.js实现的弹幕去重)", async () => {
-    const d = await chunk.plugin(detaoluPluginConfigurator({ MAX_COSINE: 1000 }));
+    const d = await chunk.plugin(DetaoluPluginConfigurator({ MAX_COSINE: 1000 }));
     console.info(await d.export(DanuniJsonTransformerConfigurator({ minify: true })));
   });
 });

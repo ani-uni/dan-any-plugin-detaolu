@@ -43,8 +43,8 @@
     "@dan-uni/dan-any": "link:@dan-uni/dan-any"
   },
   "devDependencies": {
-    "@types/node": "^25.8.0",
-    "@typescript/native-preview": "^7.0.0-dev.20260517.1",
+    "@types/node": "^25.9.0",
+    "@typescript/native-preview": "^7.0.0-dev.20260519.1",
     "bumpp": "^11.1.0",
     "rolldown-plugin-wasm": "^0.2.1",
     "typescript": "^6.0.3",
