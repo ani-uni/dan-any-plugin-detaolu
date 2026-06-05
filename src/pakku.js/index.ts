@@ -5,6 +5,7 @@
  * @see: https://github.com/xmcp/pakku.js/blob/master/pakkujs/page/options.html
  * @see: https://github.com/xmcp/pakku.js/blob/master/pakkujs/page/options.ts
  * @license: GPL-3.0
+ * @version: 2026.5.1
  * 本文件内代码来源见上，经部分修改，并整合config注释
  */
 
