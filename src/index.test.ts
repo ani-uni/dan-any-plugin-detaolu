@@ -2,8 +2,8 @@
 import { afterAll, beforeAll, describe, it } from "vite-plus/test";
 
 import { DetaoluPluginConfigurator } from "./index.ts";
-import { UniDB, type InitedUniDB, type UniChunk } from "@dan-uni/dan-any/core";
 import { BiliXmlAdapter, DanuniJsonTransformerConfigurator } from "@dan-uni/dan-any/adapters";
+import { InitedUniDB, UniChunk, UniDB } from "@dan-uni/dan-any/core/main/drizzle";
 
 const xml = `<i>
 <chatserver>chat.bilibili.com</chatserver>
