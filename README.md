@@ -38,6 +38,8 @@ const mergedChunk = await chunk.plugin(DetaoluPluginConfigurator({ THRESHOLD: 30
 贡献
 
 - 欢迎提交 issue 与 PR。提交前请运行 `vp check` 与 `vp test` 并确保遵守 GPL 兼容要求。
+- 打包使用了wasm插件，会自动处理wasm文件；构建时的`import { readFile } from "node:fs/promises";`无法解析报错可以忽略，其会自动被wasm插件构建产出自动运行时检出。
+- 测试前须先运行 `vp pack` 以生成测试所需的构建产物(由于wasm构建路径与项目src内路径不同，直接导入src文件进行测试会找不到路径)。
 
 更多
 
