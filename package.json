@@ -40,11 +40,11 @@
     "prepare": "vp config"
   },
   "dependencies": {
-    "@dan-uni/dan-any": "^2.2.1"
+    "@dan-uni/dan-any": "^2.2.3"
   },
   "devDependencies": {
-    "@types/node": "^25.9.1",
-    "@typescript/native-preview": "^7.0.0-dev.20260605.1",
+    "@types/node": "^25.9.3",
+    "@typescript/native-preview": "^7.0.0-dev.20260612.1",
     "bumpp": "^11.1.0",
     "rolldown-plugin-wasm": "^0.2.1",
     "typescript": "^6.0.3",
