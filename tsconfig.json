@@ -19,7 +19,8 @@
     "allowJs": true,
     "declarationMap": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@dan-uni/dan-any-plugin-detaolu": ["./dist/*"]
     }
   }
 }

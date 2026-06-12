@@ -9,6 +9,7 @@
       },
       "devDependencies": {
         "@arethetypeswrong/core": "^0.18.3",
+        "@edge-runtime/vm": "^5.0.0",
         "@types/node": "^25.9.3",
         "@typescript/native-preview": "^7.0.0-dev.20260612.1",
         "bumpp": "^11.1.0",
@@ -32,6 +33,10 @@
     "@bufbuild/protobuf": ["@bufbuild/protobuf@2.12.0", "", {}, "sha512-B/XlCaFIP8LOwzo+bz5uFzATYokcwCKQcghqnlfwSmM5eX/qTkvDBnDPs+gXtX/RyjxJ4DRikECcPJbyALA8FA=="],
 
     "@dan-uni/dan-any": ["@dan-uni/dan-any@2.2.3", "", { "dependencies": { "@bufbuild/protobuf": "^2.12.0", "@electric-sql/pglite": "^0.5.2", "@electric-sql/pglite-tools": "^0.4.2", "@noble/hashes": "^2.2.0", "drizzle-orm": "^1.0.0-rc.4-5d5b77c", "fast-xml-builder": "^1.2.0", "fast-xml-parser": "^5.8.0", "json-bigint": "^1.0.0", "zod": "^4.4.3" } }, "sha512-Pm6b6YCmAo83UlN6Wf4/9e1nhhGWX50VOS3Nb1YXYVXVzmxcr5Xsk/LMPxDcZQ2s2Vx3nYO2qMe+qkQGjd6ZcQ=="],
+
+    "@edge-runtime/primitives": ["@edge-runtime/primitives@6.0.0", "", {}, "sha512-FqoxaBT+prPBHBwE1WXS1ocnu/VLTQyZ6NMUBAdbP7N2hsFTTxMC/jMu2D/8GAlMQfxeuppcPuCUk/HO3fpIvA=="],
+
+    "@edge-runtime/vm": ["@edge-runtime/vm@5.0.0", "", { "dependencies": { "@edge-runtime/primitives": "6.0.0" } }, "sha512-NKBGBSIKUG584qrS1tyxVpX/AKJKQw5HgjYEnPLC0QsTw79JrGn+qUr8CXFb955Iy7GUdiiUv1rJ6JBGvaKb6w=="],
 
     "@electric-sql/pglite": ["@electric-sql/pglite@0.5.2", "", {}, "sha512-y6ySdFE7FQB7BkVaSNaPINgY7mXCyvi+3GQB5ySX9WGwgrdh31WXMP5RM40oAyYff47lIr7xdcW8UbCW5NHDmw=="],
 

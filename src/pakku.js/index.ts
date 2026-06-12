@@ -20,7 +20,6 @@ import {
 import { Queue, Stats } from "./types.ts";
 import wasmUrl from "./similarity-gen.wasm?url";
 import { readFile } from "node:fs/promises";
-import { join } from "node:path";
 
 export const DEFAULT_CONFIG = {
   // 弹幕合并
@@ -347,7 +346,7 @@ async function load_wasm(wasm_mod?: ArrayBuffer) {
     return;
   }
 
-  const wasm_u8 = await readFile(new URL(join(import.meta.url, "../../..", wasmUrl)).pathname);
+  const wasm_u8 = await readFile(new URL(wasmUrl, import.meta.url));
   await sim_init(u8array_to_arraybuffer(wasm_u8));
 }
 
