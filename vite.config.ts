@@ -13,12 +13,16 @@ export default defineConfig({
   },
   pack: {
     entry: "src/index.ts",
+    platform: "neutral",
     dts: {
       tsgo: true,
     },
     exports: true,
-    plugins: [wasm()],
     minify: true,
+    plugins: [wasm()],
+    attw: {
+      profile: "esm-only",
+    },
   },
   lint: {
     options: {
