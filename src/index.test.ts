@@ -1,9 +1,9 @@
 //基于以下注释，根据vitest生成测试用例
 import { afterAll, beforeAll, describe, it } from "vite-plus/test";
 
-import { DetaoluPluginConfigurator } from "./index.ts";
+import { DetaoluPluginConfigurator } from "@dan-uni/dan-any-plugin-detaolu";
 import { BiliXmlAdapter, DanuniJsonTransformerConfigurator } from "@dan-uni/dan-any/adapters";
-import { InitedUniDB, UniChunk, UniDB } from "@dan-uni/dan-any/core/main/drizzle";
+import { InitedUniDB, UniChunk, UniDB } from "@dan-uni/dan-any/core/main/pure";
 
 const xml = `<i>
 <chatserver>chat.bilibili.com</chatserver>
@@ -33,17 +33,17 @@ const xml = `<i>
 let udb: InitedUniDB;
 let chunk: UniChunk;
 beforeAll(async () => {
-  udb = await new UniDB().init();
+  udb = new UniDB().init();
   chunk = await udb.import(BiliXmlAdapter(xml));
 });
 afterAll(async () => {
-  await udb.shrink();
-  await udb.close();
+  udb.shrink();
+  udb.close();
 });
 
 describe("其它", () => {
   it("反套路(基于pakku.js实现的弹幕去重)", async () => {
     const d = await chunk.plugin(DetaoluPluginConfigurator({ MAX_COSINE: 1000 }));
-    console.info(await d.export(DanuniJsonTransformerConfigurator({ minify: true })));
+    console.info(d.export(DanuniJsonTransformerConfigurator({ minify: true })));
   });
 });

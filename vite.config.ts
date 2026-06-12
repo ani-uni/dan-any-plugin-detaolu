@@ -31,4 +31,7 @@ export default defineConfig({
     },
   },
   fmt: {},
+  test: {
+    environment: "edge-runtime",
+  },
 });
