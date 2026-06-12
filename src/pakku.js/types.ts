@@ -1,4 +1,4 @@
-import type { UDanmaku } from "@dan-uni/dan-any/adapters";
+import type { UDanmaku } from "@dan-uni/dan-any/core";
 
 export type int = number;
 export type float = number;
