@@ -29,9 +29,7 @@ export const DetaoluPluginConfigurator = (config?: DeTaoLuConfig) =>
         return p.danuni_dans[0].danuni_dan;
       } else {
         const dans = p.danuni_dans.map((d) => d.danuni_dan);
-        const stats = await GetStatsTransformerConfigurator(["color", "pool", "platform"])(
-          Promise.resolve(dans),
-        );
+        const stats = await GetStatsTransformerConfigurator(["color", "pool", "platform"])(dans);
         const progress = dans.map((d) => d.progress);
         const map_d = {
           ctime: now,

@@ -1,6 +1,6 @@
 {
   "name": "@dan-uni/dan-any-plugin-detaolu",
-  "version": "2.2.3",
+  "version": "2.2.3-2",
   "description": "A filter, dedupe and anti-spam plugin of dan-any, a danmaku transformer lib, based on pakku.js.",
   "keywords": [
     "anti-spam",
@@ -46,9 +46,9 @@
     "@arethetypeswrong/core": "^0.18.3",
     "@edge-runtime/vm": "^5.0.0",
     "@types/node": "^25.9.3",
-    "@typescript/native-preview": "^7.0.0-dev.20260612.1",
+    "@typescript/native-preview": "^7.0.0-dev.20260613.1",
     "bumpp": "^11.1.0",
-    "rolldown-plugin-wasm": "^0.2.1",
+    "rolldown-plugin-wasm": "^0.3.2",
     "typescript": "^6.0.3",
     "vite-plus": "^0.1.24"
   },
